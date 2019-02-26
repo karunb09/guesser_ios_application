@@ -15,6 +15,7 @@
 		F8DE6EAE2225F32100E51FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8DE6EAC2225F32100E51FBA /* LaunchScreen.storyboard */; };
 		F8DE6EB92225F32100E51FBA /* GuesserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE6EB82225F32100E51FBA /* GuesserTests.swift */; };
 		F8DE6EC42225F32100E51FBA /* GuesserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE6EC32225F32100E51FBA /* GuesserUITests.swift */; };
+		F8DE6ED22225F8A200E51FBA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE6ED12225F8A200E51FBA /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F8DE6EBF2225F32100E51FBA /* GuesserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuesserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DE6EC32225F32100E51FBA /* GuesserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuesserUITests.swift; sourceTree = "<group>"; };
 		F8DE6EC52225F32100E51FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8DE6ED12225F8A200E51FBA /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				F8DE6EA32225F32100E51FBA /* FirstViewController.swift */,
 				F8DE6EA52225F32100E51FBA /* SecondViewController.swift */,
 				F8DE6EA72225F32100E51FBA /* Main.storyboard */,
+				F8DE6ED12225F8A200E51FBA /* ThirdViewController.swift */,
 				F8DE6EAA2225F32100E51FBA /* Assets.xcassets */,
 				F8DE6EAC2225F32100E51FBA /* LaunchScreen.storyboard */,
 				F8DE6EAF2225F32100E51FBA /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				F8DE6EA62225F32100E51FBA /* SecondViewController.swift in Sources */,
 				F8DE6EA22225F32100E51FBA /* AppDelegate.swift in Sources */,
+				F8DE6ED22225F8A200E51FBA /* ThirdViewController.swift in Sources */,
 				F8DE6EA42225F32100E51FBA /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
