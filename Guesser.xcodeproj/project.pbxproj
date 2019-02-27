@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8B9D2C82226485500334818 /* Guesser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B9D2C72226485500334818 /* Guesser.swift */; };
 		F8DE6EA22225F32100E51FBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE6EA12225F32100E51FBA /* AppDelegate.swift */; };
 		F8DE6EA42225F32100E51FBA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE6EA32225F32100E51FBA /* FirstViewController.swift */; };
 		F8DE6EA62225F32100E51FBA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE6EA52225F32100E51FBA /* SecondViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8B9D2C72226485500334818 /* Guesser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guesser.swift; sourceTree = "<group>"; };
 		F8DE6E9E2225F32100E51FBA /* Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guesser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8DE6EA12225F32100E51FBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8DE6EA32225F32100E51FBA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				F8DE6EA12225F32100E51FBA /* AppDelegate.swift */,
 				F8DE6EA32225F32100E51FBA /* FirstViewController.swift */,
+				F8B9D2C72226485500334818 /* Guesser.swift */,
 				F8DE6EA52225F32100E51FBA /* SecondViewController.swift */,
 				F8DE6EA72225F32100E51FBA /* Main.storyboard */,
 				F8DE6ED12225F8A200E51FBA /* ThirdViewController.swift */,
@@ -264,6 +267,7 @@
 			files = (
 				F8DE6EA62225F32100E51FBA /* SecondViewController.swift in Sources */,
 				F8DE6EA22225F32100E51FBA /* AppDelegate.swift in Sources */,
+				F8B9D2C82226485500334818 /* Guesser.swift in Sources */,
 				F8DE6ED22225F8A200E51FBA /* ThirdViewController.swift in Sources */,
 				F8DE6EA42225F32100E51FBA /* FirstViewController.swift in Sources */,
 			);

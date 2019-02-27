@@ -212,23 +212,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3S-Fc-ufY">
-                                <rect key="frame" x="137" y="504" width="104" height="30"/>
-                                <state key="normal" title="Clear Statistics"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stddev:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRw-dl-8jI">
                                 <rect key="frame" x="57" y="389" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3S-Fc-ufY">
+                                <rect key="frame" x="155" y="494" width="104" height="30"/>
+                                <state key="normal" title="Clear Statistics"/>
+                                <connections>
+                                    <action selector="clearBTN:" destination="0Zr-hW-zo8" eventType="touchUpInside" id="tbE-yF-AYd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Gy1-ae-uKs" firstAttribute="leading" secondItem="HYo-sx-DuP" secondAttribute="leading" id="0Pj-PR-3x4"/>
                             <constraint firstItem="Ruh-23-hW9" firstAttribute="leading" secondItem="wRw-dl-8jI" secondAttribute="leading" id="0Vi-49-klB"/>
-                            <constraint firstItem="j3S-Fc-ufY" firstAttribute="leading" secondItem="fn2-96-6Z9" secondAttribute="leading" constant="137" id="48Q-T3-jb2"/>
+                            <constraint firstItem="j3S-Fc-ufY" firstAttribute="leading" secondItem="fn2-96-6Z9" secondAttribute="leading" constant="155" id="48Q-T3-jb2"/>
                             <constraint firstItem="B8Y-25-I3q" firstAttribute="top" secondItem="fn2-96-6Z9" secondAttribute="top" constant="37" id="51s-Zm-Uq7"/>
                             <constraint firstItem="2ux-Yj-yUx" firstAttribute="baseline" secondItem="CMe-j6-Cy6" secondAttribute="baseline" id="7XH-CI-pKL"/>
                             <constraint firstItem="Ruh-23-hW9" firstAttribute="baseline" secondItem="Gy1-ae-uKs" secondAttribute="baseline" id="Fj2-To-dHI"/>
@@ -242,7 +245,7 @@
                             <constraint firstItem="wRw-dl-8jI" firstAttribute="baseline" secondItem="HYo-sx-DuP" secondAttribute="baseline" id="bqf-F3-De3"/>
                             <constraint firstItem="Bo8-ee-K1j" firstAttribute="leading" secondItem="CMe-j6-Cy6" secondAttribute="leading" id="g3i-hq-eNq"/>
                             <constraint firstItem="zXO-Gc-WjH" firstAttribute="baseline" secondItem="Bo8-ee-K1j" secondAttribute="baseline" id="jI4-58-van"/>
-                            <constraint firstItem="fn2-96-6Z9" firstAttribute="bottom" secondItem="j3S-Fc-ufY" secondAttribute="bottom" constant="279" id="msH-os-qEf"/>
+                            <constraint firstItem="fn2-96-6Z9" firstAttribute="bottom" secondItem="j3S-Fc-ufY" secondAttribute="bottom" constant="289" id="msH-os-qEf"/>
                             <constraint firstItem="CMe-j6-Cy6" firstAttribute="leading" secondItem="Gy1-ae-uKs" secondAttribute="leading" id="pzf-kR-erp"/>
                             <constraint firstItem="2ux-Yj-yUx" firstAttribute="leading" secondItem="Ruh-23-hW9" secondAttribute="leading" id="qZo-zW-Je1"/>
                             <constraint firstItem="B8Y-25-I3q" firstAttribute="leading" secondItem="fn2-96-6Z9" secondAttribute="leading" constant="170" id="sld-O8-1DM"/>
@@ -250,6 +253,12 @@
                         <viewLayoutGuide key="safeArea" id="fn2-96-6Z9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Guess Statistics" image="Statistics-512-60" selectedImage="Statistics-512-60" id="di2-K7-ZBC"/>
+                    <connections>
+                        <outlet property="maxLBL" destination="CMe-j6-Cy6" id="rrz-vT-sjO"/>
+                        <outlet property="meanLBL" destination="Gy1-ae-uKs" id="afP-0B-Bt8"/>
+                        <outlet property="minLBL" destination="Bo8-ee-K1j" id="SiZ-Qs-dBX"/>
+                        <outlet property="sdLBL" destination="HYo-sx-DuP" id="rsW-nP-KPL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLv-PM-gtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

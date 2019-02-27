@@ -10,6 +10,18 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
+   
+    @IBOutlet weak var minLBL: UILabel!
+    @IBOutlet weak var maxLBL: UILabel!
+    @IBOutlet weak var meanLBL: UILabel!
+    @IBOutlet weak var sdLBL: UILabel!
+    @IBAction func clearBTN(_ sender: Any) {
+        minLBL.text = "\(0)"
+        maxLBL.text = "\(0)"
+        meanLBL.text = "\(0)"
+        sdLBL.text = "\(0)"
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
