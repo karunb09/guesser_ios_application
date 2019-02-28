@@ -7,24 +7,42 @@ class Guesser {
     
     struct Guess {
         var correctAnswer:Int
-        var numAttempltsRequired:Int
+        var numAttemptsRequired:Int
     }
     
     var numAttempts:Int{
         return _numattempts
     }
     
-    init() {
-        correctAnswer = 0
-        _numattempts = 0
+    private init() {
+        self.correctAnswer = 0
+        self._numattempts = 0
+        self.guesses = []
+    }
+    
+    func guess(index: Int)->Guess{
+        return guesses[index]
+    }
+    
+    subscript(guess:Int)->Guess{
+        return guesses[guess]
+    }
+    
+    func clearStatistics(){
         guesses = []
     }
     
-    private func createNewProblem() {
-        let random = Int.random(in: 0..<10) + 1
+    func numOfGuesses() ->Int{
+        return guesses.count
+    }
+    
+    func createNewProblem() {
+        let random = Int.random(in: 1...10)
         correctAnswer = random
         _numattempts = 0
     }
+    
+    static var shared = Guesser()
     
     func amIRight(guess: Int) -> String {
         _numattempts = _numattempts + 1
@@ -37,11 +55,37 @@ class Guesser {
             return Result.tooLow.rawValue
         }
         else{
-            guesses.append((Guesser.Guess).init(correctAnswer: correctAnswer, numAttempltsRequired: _numattempts))
-            createNewProblem()
-            return ""
+            guesses.append(Guess(correctAnswer: correctAnswer, numAttemptsRequired: _numattempts))
+            return Result.correct.rawValue
         }
     }
+    
+    func minimumAttempts()->Int{
+        var minimum = guesses[0].numAttemptsRequired
+        for i in guesses{
+            if minimum > i.numAttemptsRequired{
+                minimum = i.numAttemptsRequired
+            }
+        }
+        return minimum
+    }
+    
+    func maximumAttempts()->Int{
+        var maximum:Int
+        if Guesser.shared.numAttempts == 0{
+            maximum = 0
+        }else{
+            maximum = guesses[0].numAttemptsRequired
+        }
+        //var maximum = guesses[0].numAttemptsRequired
+        for i in guesses{
+            if maximum < i.numAttemptsRequired{
+                maximum = i.numAttemptsRequired
+            }
+        }
+        return maximum
+    }
+    
     
     enum Result:String {
         case tooLow = "Too Low"
@@ -49,7 +93,7 @@ class Guesser {
         case correct = "Correct"
     }
     
- 
+    
     
     
 }
