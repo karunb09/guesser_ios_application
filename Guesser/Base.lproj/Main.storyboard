@@ -108,7 +108,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Guesser" image="think" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Guesser" image="guess" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="guessLBL" destination="m6k-45-KN0" id="UxB-Ld-Fbo"/>
                         <outlet property="outputLBL" destination="wpd-88-QWc" id="oh6-ZB-sHd"/>
@@ -180,7 +180,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Guess History" image="Image-2" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Guess History" image="history" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="tableViewLBL" destination="BLe-QD-tXM" id="tmI-dH-kzJ"/>
                     </connections>
@@ -288,7 +288,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fn2-96-6Z9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Guess Statistics" image="Statistics-512-60" selectedImage="Statistics-512-60" id="di2-K7-ZBC"/>
+                    <tabBarItem key="tabBarItem" title="Guess Statistics" image="lst" id="di2-K7-ZBC"/>
                     <connections>
                         <outlet property="maxLBL" destination="CMe-j6-Cy6" id="rrz-vT-sjO"/>
                         <outlet property="meanLBL" destination="Gy1-ae-uKs" id="afP-0B-Bt8"/>
@@ -321,8 +321,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image-2" width="60" height="60"/>
-        <image name="Statistics-512-60" width="40" height="40"/>
-        <image name="think" width="40" height="40"/>
+        <image name="guess" width="29" height="29"/>
+        <image name="history" width="29" height="29"/>
+        <image name="lst" width="29" height="29"/>
     </resources>
 </document>

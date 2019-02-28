@@ -11,7 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
     
     
- 
+    
     @IBOutlet weak var guessLBL: UITextField!
     
     
@@ -20,17 +20,25 @@ class FirstViewController: UIViewController {
     
     @IBAction func amirightLBL(_ sender: Any) {
         if let value = Int(guessLBL.text!) {
-            let result = Guesser.shared.amIRight(guess: Int(value))
-            if result == Guesser.Result.correct.rawValue{
-                outputLBL.text = result
-                displayMessage()
-                Guesser.shared.createNewProblem()
-            }else{
-                outputLBL.text = result
+            if value < 0 || value > 10{
+                invalidMessage()
             }
-        }else{
+            else{
+                let result = Guesser.shared.amIRight(guess: Int(value))
+                if result == Guesser.Result.correct.rawValue{
+                    outputLBL.text = result
+                    displayMessage()
+                    Guesser.shared.createNewProblem()
+                }
+                else{
+                    outputLBL.text = result
+                }
+            }
+        }
+        else{
             invalidMessage()
         }
+        
     }
     
     @IBAction func newLBL(_ sender: Any) {

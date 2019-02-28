@@ -44,7 +44,7 @@ class ThirdViewController: UIViewController {
     */
     
     func statistics(){
-        minLBL.text = String(Guesser.shared.maximumAttempts())
+        minLBL.text = String(Guesser.shared.minimumAttempts())
         
         maxLBL.text = String(Guesser.shared.maximumAttempts())
         var count = 0
@@ -53,22 +53,21 @@ class ThirdViewController: UIViewController {
         }
         let mean = Double(count)/Double(Guesser.shared.numOfGuesses())
         if mean.isNaN{
-            meanLBL.text = "0.0"
+            meanLBL.text = "0"
         }
         else{
-        meanLBL.text = "\(mean)"
+        meanLBL.text = String(format: "%.2f", mean)
         }
         var sdsum = 0.0
         for i in 0..<Guesser.shared.numOfGuesses(){
             sdsum += pow(Double(Guesser.shared.guess(index: i).numAttemptsRequired) - mean, 2)
         }
-        let result = sdsum/Double(Guesser.shared.numOfGuesses())
-        //sdLBL.text = "\(sdsum/Double(Guesser.shared.numOfGuesses()))"
+        let result = sqrt(sdsum/Double(Guesser.shared.numOfGuesses()))
         if result.isNaN{
-            sdLBL.text = "0.0"
+            sdLBL.text = "0"
         }
         else{
-            sdLBL.text = "\(result)"
+            sdLBL.text = String(format: "%.2f", result)
         }
     }
 }

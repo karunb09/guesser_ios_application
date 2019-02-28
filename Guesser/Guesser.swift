@@ -47,10 +47,10 @@ class Guesser {
     func amIRight(guess: Int) -> String {
         _numattempts = _numattempts + 1
         //let generatedNum = createNewProblem()
-        if(guess > correctAnswer){
+        if guess > correctAnswer{
             return Result.tooHigh.rawValue
         }
-        else if(guess < correctAnswer){
+        else if guess < correctAnswer{
             //Too low
             return Result.tooLow.rawValue
         }
@@ -61,13 +61,19 @@ class Guesser {
     }
     
     func minimumAttempts()->Int{
-        var minimum = guesses[0].numAttemptsRequired
+        var minimum:Int
+        if numOfGuesses() == 0{
+            minimum = 0
+        }else{
+            minimum = guesses[0].numAttemptsRequired
         for i in guesses{
             if minimum > i.numAttemptsRequired{
                 minimum = i.numAttemptsRequired
             }
         }
-        return minimum
+  
+    }
+              return minimum
     }
     
     func maximumAttempts()->Int{
